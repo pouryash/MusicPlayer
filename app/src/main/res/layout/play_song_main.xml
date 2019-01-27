@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#96afafaf"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/ButtonTestPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/ButtonTestNextTrack"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackground"
+        app:srcCompat="@drawable/ic_play_button" />
+
+    <ImageButton
+        android:layout_alignParentRight="true"
+        android:id="@+id/ButtonTestNextTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackground"
+        android:paddingStart="16dp"
+        app:srcCompat="@drawable/ic_next_track_button" />
+
+    <ImageButton
+        android:id="@+id/ButtonTestPreviousTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/ButtonTestPlayPause"
+        android:background="?attr/selectableItemBackground"
+        android:paddingEnd="16dp"
+        app:srcCompat="@drawable/ic_previous_track" />
+
+    <TextView
+        android:id="@+id/tv_songName_playSongMain"
+        android:layout_marginEnd="8dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_toStartOf="@id/ButtonTestPreviousTrack"
+        tools:text="pourya1111111111111111111111"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.ps.music.LocalMusicFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:paddingBottom="50dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:paddingTop="4dp"
+            android:scrollbars="vertical"
+            android:clipToPadding="false"
+            android:id="@+id/rv_activityMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/lin_playSongMain"
+            />
+
+        <LinearLayout
+            android:id="@+id/lin_playSongMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_behavior="@string/bottom_sheet_behavior"
+            android:layout_alignParentBottom="true">
+
+            <include layout="@layout/play_song_main" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
