@@ -511,22 +511,19 @@ public class PlaySongLocal extends AppCompatActivity implements View.OnClickList
         super.onPause();
         if (hasBoober) {
             audioWidget.show(100, 100);
-            audioWidget.expand();
-            if (mediaPlayer.isPlaying()) {
-                audioWidget.controller().start();
-            } else {
-                audioWidget.controller().stop();
-            }
+//            audioWidget.expand();
+            isBooberActive = true;
         } else {
             startMusicBobber();
-            audioWidget.expand();
-            if (mediaPlayer.isPlaying()) {
-                audioWidget.controller().start();
-            } else {
-                audioWidget.controller().stop();
-            }
+//            audioWidget.expand();
             isBooberActive = true;
             audioWidget.controller().albumCover(Image.uriToDrawable(imageUri, this));
+        }
+        if (mediaPlayer.isPlaying()) {
+            audioWidget.controller().start();
+        } else {
+            audioWidget.hide();
+            audioWidget.controller().stop();
         }
         isOncreate = true;
 //        NotificationService.onServiceStateChange = this;
@@ -537,7 +534,6 @@ public class PlaySongLocal extends AppCompatActivity implements View.OnClickList
         super.onResume();
         if (isBooberActive) {
             hasBoober = true;
-            audioWidget.collapse();
             audioWidget.hide();
             isBooberActive = false;
         }
